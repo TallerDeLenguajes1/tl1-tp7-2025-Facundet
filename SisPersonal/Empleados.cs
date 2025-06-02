@@ -19,6 +19,12 @@ namespace EspacioEmpleados
         public double SueldoBasico;
         public Cargos cargo;
 
+        public int MostrarAntiguedad()
+        {
+            DateTime hoy = DateTime.Now;
+            int antiguedad = hoy.Year - FechaIngresoToEmpresa.Year;
+            return antiguedad;
+        }
         public int MostrarEdad() //paso parametros cuando vengan de fuera de la clase
         {
             DateTime hoy = DateTime.Now;
